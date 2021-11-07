@@ -32,6 +32,10 @@ def convert(request):
                 os.remove("Foto/{}{}".format(fn,extjpg))
             zip_file = open('convert.zip', 'rb')
             return FileResponse(zip_file)
+
+    else:
+        return render(request,'core/error.html')
+    
                 
         
         
